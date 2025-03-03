@@ -9,6 +9,8 @@ void llpivot(Node*& head, Node*& smaller, Node*& larger, int pivot)
     //end of list has been reached
     if(head == NULL)
     {
+        smaller = NULL;
+        larger = NULL;
         return;
     }
 
