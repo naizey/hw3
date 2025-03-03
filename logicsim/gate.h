@@ -15,8 +15,8 @@ class Gate
         void wireInput(unsigned int,Wire*);
         
     protected:
-      Wire* m_output;
-      std::vector<Wire*> m_inputs;
+      Wire* m_output; //a pointer to the wire connected to the gate's input
+      std::vector<Wire*> m_inputs; //a vector of pointers to the wires connected to the gates inputs
 			uint32_t m_delay;
 			char m_current_state;
 };
@@ -33,6 +33,14 @@ class Or2Gate : public Gate
   public:
       Or2Gate(Wire*, Wire*, Wire*);
       Event* update(uint64_t);
+};
+
+//adding NotGate
+class NotGate : public Gate
+{
+  public:
+    NotGate(Wire*, Wire*);
+    Event* update(uint64_t time);
 };
 
 #endif
