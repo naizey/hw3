@@ -67,6 +67,12 @@ void dealloc(Node* head)
 //   function object struct declarations
 // -----------------------------------------------
 
+struct Comp {
+    bool operator()(int value) const {
+        return value % 2 == 0;
+    }
+};
+    
 
 
 
@@ -86,6 +92,24 @@ int main(int argc, char* argv[])
     print(head);
 
     // Test out your linked list code
+    Node* smaller = NULL;
+    Node* larger = NULL;
+    llpivot(head, smaller, larger, 6);
+
+    cout << "Smaller list: ";
+    print(smaller);
+    cout << "Larger list: ";
+    print(larger);
+
+    //example with functor
+    Node* filtered = llfilter(larger, Comp());
+    cout << "Filtered list: ";
+    print(filtered);
+
+    dealloc(smaller);
+    dealloc(filtered);
+
+
 
 
 
