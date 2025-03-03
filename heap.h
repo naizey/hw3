@@ -82,7 +82,7 @@ private:
 //Constructor
 template <typename T, typename PComparator>
 Heap<T, PComparator>::Heap(int m, PComparator c) :
-  m_(n), comp_(c) {}
+  m_(m), comp_(c) {}
 
 
 //Destructor
