@@ -67,7 +67,7 @@ private:
   //Data members
   std::vector<T> data_; // vector to store heap data
   PComparator comp_; // instance of the comparator object
-  int m_; // m-aryness of the heap
+  size_t m_; // m-aryness of the heap
 
   //Helper functions 
   void heapifyUp(size_t index);
@@ -82,7 +82,7 @@ private:
 //Constructor
 template <typename T, typename PComparator>
 Heap<T, PComparator>::Heap(int m, PComparator c) :
-  m_(m), comp_(c) {}
+  comp_(c), m_(m) {}
 
 
 //Destructor
