@@ -6,16 +6,10 @@ binary "output" as W1
 W0 is {low,high} 
 W1 is {low,high} 
 
-@8
-W0 is high
-
-@8
-W1 is low
-
-@6
+@2
 W0 is low
 
-@6
+@2
 W1 is high
 
 @4
@@ -24,11 +18,17 @@ W0 is high
 @4
 W1 is low
 
-@2
+@6
 W0 is low
 
-@2
+@6
 W1 is high
+
+@8
+W0 is high
+
+@8
+W1 is low
 
 @enduml
 

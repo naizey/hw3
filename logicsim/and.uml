@@ -8,13 +8,12 @@ W0 is {low,high}
 W1 is {low,high} 
 W2 is {low,high} 
 
-@8
-W1 is low
-
-@6
+@0
 W0 is low
 
-@6
+W1 is high
+
+@0
 W2 is low
 
 @4
@@ -23,15 +22,10 @@ W0 is high
 @4
 W2 is high
 
-@2
-W1 is high
-
-@0
-W0 is low
-
+@6
 W1 is low
 
-@0
+@6
 W2 is low
 
 @enduml
